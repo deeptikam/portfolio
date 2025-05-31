@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href="../items/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../style.css">
+    <title>elysium</title>
+    <script defer src="../script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Dongle&family=Monoton&family=NTR&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Dongle&family=Monoton&family=NTR&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<div class="cursor"></div>
+
+<style>
+
+    .website {
+        background: linear-gradient(to right, #C7DAA9, #daa9ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: none;
+   }
+
+   .website:hover {
+        background: linear-gradient(to right, #C7DAA9, #daa9ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: underline;
+   }
+
+     .homeFooter {
+            line-height: 10px;
+            margin-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 100px;
+            /* display: flex;
+            flex-wrap: wrap; */
+        }
+
+        .footerText {
+            font-size: 18px;
+        }
+
+        .footerLink {
+            text-decoration: none;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            text-decoration: underline;
+            color:#daa9ad;
+        }
+
+        .link {
+            color: #C7DAA9;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #daa9ad;
+            text-decoration: underline;
+        }
+
+        .play {
+            margin-top: 90px;
+            margin-left: 100px;
+            /* border: 1px solid pink; */
+        }
+
+       
+
+        .gradient {
+            background: linear-gradient(to right, #C7DAA9, #daa9ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            /* padding-top: 20px; */
+        }
+
+        .information p {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .information h4 {
+            margin-bottom: 4px;
+        }
+
+        .blenderRenders {
+            display: flex;
+            /* margin-left: -10px; */
+            width: 100%;
+            flex-wrap: wrap;
+            margin-top: 80px;
+            /* border: 1px solid pink; */
+            gap: 30px;
+            /* border: 1px solid pink; */
+        }
+
+
+
+        .render {
+            width: 45%;
+            border-radius: 10px;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes appear {
+           from{
+                opacity:0;
+                scale:1;
+                transform: translateY(50px);
+            }
+            to {
+                opacity:1;
+                scale:1;
+                transform: translateY(0px);
+            }
+        }
+
+        .title {
+            display: flex;
+        }
+
+        .subhead {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 93%;
+            margin-top: 150px;
+        }
+        
+        .subLine {
+            background: white;
+            border: none;
+            height:.5px;
+            flex-grow:1;
+        }
+
+        .subText {
+            white-space: nowrap;
+            margin:0;
+        }
+
+        iframe {
+            width:500px;
+            height:auto;
+        }
+
+        .homeFooter p {
+            font-weight: 400;
+        }
+
+        p {
+            font-weight: lighter;
+        }
+
+        .subRender {
+            width: 900px;
+            /* border: 1px solid blue; */
+        }
+
+        .renderText {
+            width: 300px;
+            text-align: right;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .lineRenders {
+            display:flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            padding-top: 120px;
+        }
+
+        .subRender img {
+            width: 280px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+     @media(max-width:1024px){
+        .footerLink {
+            text-decoration: none;
+            /* font-size: 15px; */
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            /* text-decoration: underline;
+            font-size: 15px;
+            color:#daa9ad; */
+            text-decoration: none;
+            /* font-size: 15px; */
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            /* padding-top: 20px; */
+        }
+
+        .information p {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .information h4 {
+            margin-bottom: 4px;
+        }
+
+        .description {
+            width: 100%;
+            margin-bottom: -50px;
+        }
+
+        .play {
+            margin-top: 120px;
+            margin-left: 7%;
+        }
+
+        .renderText {
+            width: 90%;
+            text-align: left;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+    }
+
+    @media(max-width:600px){
+        .homeButton {
+            margin-left: 15px;
+            margin-top: 30px;
+        }
+
+        .homeButtom img {
+            height: 50px;
+        }
+
+        .footerText {
+            font-size: 15px;
+        }
+
+        .footerLink {
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            /* text-decoration: underline;
+            font-size: 15px;
+            color:#daa9ad; */
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .description {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            row-gap: 10px;
+            /* padding-top: 20px; */
+        }
+
+        .lineRenders {
+            padding-top: 80px;
+        }
+
+        .navLinks {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            row-gap: 10px;
+        }
+
+        .navlink {
+            text-decoration: none;
+            color: white;
+            border: .5px solid white;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+            border-radius: 50px;
+            /* margin-right: 5px; */
+        }
+
+        .navlink p {
+            font-weight: 10px;
+        }
+
+    }
+
+       
+
+
+</style>
+
+
+
+<body>
+     <nav class="nav">
+        <a href="../index.html" class="homeButton" id="logo">
+            <img src="../items/logo.png" alt="logo" width="auto" height="120px">
+        </a>
+        <!-- <hr class="aboutLine"> -->
+        <div class="navLinks">
+            <a href="../index.html#work" class="navlink">work</a>
+            <a href="play.html" class="navlink">play</a>
+            <a href="about.html" class="navlink">about</a>  
+        </div>
+    </nav>
+    <div class="play">
+        <h1>Lunar Gala 2025 : Elysium</h1>
+        <div class="information">
+            <div class="description">
+                <h4><span class="gradientText">description</span></h4>
+                <p>Lunar Gala is a student-run fashion show at Carnegie Mellon University, where designers bring 
+                    <br>to life their interpretation of the year's theme to display for thousands of attendees. 
+                    <br>For Lunar Gala 2025, I was part of the motion design team, tasked to work hand in hand
+                    <br>with select designers to support their vision through animated backdrops, while fulfilling 
+                    <br>the theme of 'Elysium' and following the motifs meant to be shown throughout the entire show.
+
+                    <br>Elysium is a place of paradise and happiness, and Lunar Gala approaches this theme through an
+                    <br>exploration of the journey of finding Elysium by following four distinct acts: Emergence,
+                    <br>Blossom, Hubris, and Embrace.
+                </p>
+            </div>
+            <div>
+                <h4><span class="gradientText">timeline</span></h4>
+                <p>09/2024 -<br>03/2025</p>
+            </div>
+            <div>
+                <h4><span class="gradientText">role</span></h4>
+                <p>member of motion <br>design team <br>(7 people)</p>
+            </div>
+            <div>
+                <h4><span class="gradientText">tools</span></h4>
+                <p>blender,<br>adobe premiere pro</p>
+            </div>
+        </div>
+        <div class="blenderRenders">
+            <video class="render" src="../items/work/lunargala/Recupera-Se FINAL.mp4" autoplay loop muted playsinline></video>
+            <video class="render" src="../items/work/lunargala/Self_Love FINAL.mp4" autoplay loop muted playsinline></video>
+            <video class="render" src="../items/work/lunargala/A2S4.mp4" autoplay loop muted playsinline></video>
+            <video class="render" src="../items/work/lunargala/ACT2shot1.MP4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="subhead">
+            <hr class="subLine">
+            <h4 class="subText">line animations</h4>
+            <hr class="subLine">
+        </div>
+        <div class="lineRenders">
+            <div class="subRender">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe 
+                    src="https://player.vimeo.com/video/1088221010?h=4a9e7ca5b6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                    allowfullscreen
+                    title="Lunar Gala Elysium - Recupera-Se"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    </iframe>
+                </div>
+                <div class="renderIMG">
+                    <img src="../items/work/lunargala/IMG_9411.jpg">
+                    <img src="../items/work/lunargala/IMG_9375.jpg">
+                    <img src="../items/work/lunargala/IMG_9406.jpg">
+                </div>
+            </div>
+            <div class="renderText">
+                <h1><span class="gradientText">Recupera-Se</span></h1>
+                <p>
+                    Recupera-Se is showcased in Act II, with fashion designs by
+                    Mikayla Gee, Jason Asiedu, and Nataniella Essang, and music by
+                    Samyuktha Athreya. Act II revolves around the theme 'Blossom',
+                    encompassing aspects of beginnings, growth, and awakening.
+                    The designers wanted a sandy vibe, and to showcase a storyline of someone
+                    being scarred and their journey to recovery and healing, with time being
+                    the ultimate healer. For this line, I incorporated colors from 
+                    the designers fashion line, used the circle motif that appears
+                    in all of Elysium's line motions, and explored using particle systems
+                    in Blender to simulate sand.
+                </p>
+            </div>
+        </div>
+
+        <div class="lineRenders">
+            <div class="subRender">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe 
+                    src="https://player.vimeo.com/video/1088221181?h=f55fb177d7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                    allowfullscreen
+                    title="Lunar Gala Elysium - Self Love"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    </iframe>
+                </div>
+                <div class="renderIMG">
+                    <img src="../items/work/lunargala/IMG_9434.jpg">
+                    <img src="../items/work/lunargala/IMG_9390.jpg">
+                    <img src="../items/work/lunargala/IMG_9444.jpg">
+                </div>
+            </div>
+            <div class="renderText">
+                <h1><span class="gradientText">Self Love</span></h1>
+                <p>
+                    Self Love is showcased in Act IV, with fashion designs by
+                    Nate Neira, and music by
+                    Evan Neely. Act IV revolves around the theme 'Embrace',
+                    and is all about the acceptance, fulfillment, and hope of oneself.
+                    The designer wanted something metallic, and bold, to align
+                    with the street-style fashion of their line, in order to 
+                    showcase the idea of self-love and growth by being true 
+                    to oneself. For this line, I modeled several different
+                    abstract objects, and added metallic textures, making sure some of them
+                    had slight color variations as to match the bold colors in the fashion
+                    line. I added different timings and directions to the animation of 
+                    several objects, and followed the circle motif that all the 
+                    Elysium line motions hold.
+                </p>
+            </div>
+        </div>
+        <div class="subhead">
+            <hr class="subLine">
+            <h4 class="subText">act animations</h4>
+            <hr class="subLine">
+        </div>
+        <p>act animations are played in between each of the four acts.
+            <br>I was in charge of scenes one and four for the act animation that 
+            <br>plays before Act II : Blossom.
+        </p>
+        <div class="lineRenders">
+            <div class="subRender">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe 
+                    src="../items/work/lunargala/ACT2shot1.MP4"
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                    allowfullscreen
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    </iframe>
+                </div>
+            </div>
+            <div class="renderText">
+                <h1><span class="gradientText">Act II Scene I</span></h1>
+                <p>
+                    Act II Scene I is a drop of water falling into a reflection of
+                    leaves. For this animation, I modeled leaves and textured them
+                    using BlenderKit, I then simulated 
+                    a water droplet and its ripples.
+                </p>
+            </div>
+        </div>
+        <div class="lineRenders">
+            <div class="subRender">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe 
+                    src="../items/work/lunargala/A2S4.mp4"
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                    allowfullscreen
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    </iframe>
+                </div>
+            </div>
+            <div class="renderText">
+                <h1><span class="gradientText">Act II Scene IV</span></h1>
+                <p>
+                    Act II Scene IV is water pooling off of a pile of rocks.
+                    For this animation, I modeled simple rocks and textured them
+                    using BlenderKit. I then used fluid simulation to have 
+                    the water drip down the rocks.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+   
+
+</body>
+<footer class="homeFooter">
+        <p class="footerText"> &copy; 2025 deeptika mandha</p>
+        <p class="footerText">coded with html/css/javascript</p>
+        <a href="mailto:dmandha@andrew.cmu.edu" class="footerLink"> contact </a>
+        <p></p>
+        <div class="toTop">
+            <a href="#" class="footerLink">back to top</a>
+        </div>
+</footer>
+</html>

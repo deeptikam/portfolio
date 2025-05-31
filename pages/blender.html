@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href="../items/dsm opaque2.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../style.css">
+    <title>blender</title>
+    <script defer src="../script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Dongle&family=Monoton&family=NTR&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Dongle&family=Monoton&family=NTR&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="cursor"></div>
+
+<style>
+
+    .website {
+        background: linear-gradient(to right, #C7DAA9, #daa9ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: none;
+   }
+
+   .website:hover {
+        background: linear-gradient(to right, #C7DAA9, #daa9ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: underline;
+   }
+
+     .homeFooter {
+            line-height: 10px;
+            margin-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 100px;
+            /* display: flex;
+            flex-wrap: wrap; */
+        }
+
+        .footerText {
+            font-size: 18px;
+        }
+
+        .footerLink {
+            text-decoration: none;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            text-decoration: underline;
+            color:#daa9ad;
+        }
+
+        .link {
+            color: #C7DAA9;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #daa9ad;
+            text-decoration: underline;
+        }
+
+        .play {
+            margin-top: 90px;
+            margin-left: 100px;
+            /* border: 1px solid pink; */
+        }
+
+       
+
+        .gradient {
+            background: linear-gradient(to right, #C7DAA9, #daa9ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            /* padding-top: 20px; */
+        }
+
+        .information p {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .information h4 {
+            margin-bottom: 4px;
+        }
+
+        .blenderRenders {
+            display: flex;
+            /* margin-left: -10px; */
+            width: 100%;
+            flex-wrap: wrap;
+            margin-top: 80px;
+            /* border: 1px solid pink; */
+            gap: 30px;
+            /* border: 1px solid pink; */
+        }
+
+
+
+        .render {
+            width: 45%;
+            border-radius: 10px;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes appear {
+           from{
+                opacity:0;
+                scale:1;
+                transform: translateY(50px);
+            }
+            to {
+                opacity:1;
+                scale:1;
+                transform: translateY(0px);
+            }
+        }
+
+        .title {
+            display: flex;
+        }
+
+        .subhead {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 93%;
+            margin-top: 150px;
+        }
+        
+        .subLine {
+            background: white;
+            border: none;
+            height:.5px;
+            flex-grow:1;
+        }
+
+        .subText {
+            white-space: nowrap;
+            margin:0;
+        }
+
+        iframe {
+            width:500px;
+            height:auto;
+        }
+
+        .homeFooter p {
+            font-weight: 400;
+        }
+
+        p {
+            font-weight: lighter;
+        }
+
+        .subRender {
+            width: 900px;
+            /* border: 1px solid blue; */
+        }
+
+        .renderText {
+            width: 300px;
+            text-align: right;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .lineRenders {
+            display:flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            padding-top: 120px;
+        }
+
+        .subRender img {
+            width: 280px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        .renderIMG img {
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .renderIMG {
+            gap:10px;
+        }
+
+        .body {
+            padding-top: 120px;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .photos img {
+            border-radius: 10px;
+            width: 90%;
+            /* height: 700px; */
+            aspect-ratio: 8 / 5;
+            object-fit: cover;
+            object-position: center;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+      
+        .body p {
+            width: 40%;
+            padding-bottom: 50px;
+        }
+
+        @media(max-width:1024px){
+        .footerLink {
+            text-decoration: none;
+            /* font-size: 15px; */
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            /* text-decoration: underline;
+            font-size: 15px;
+            color:#daa9ad; */
+            text-decoration: none;
+            /* font-size: 15px; */
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            /* padding-top: 20px; */
+        }
+
+        .information p {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .information h4 {
+            margin-bottom: 4px;
+        }
+
+        .description {
+            width: 100%;
+            margin-bottom: -50px;
+        }
+
+        .body p {
+            width: 90%;
+        }
+
+        .play {
+            margin-top: 120px;
+            margin-left: 7%;
+        }
+
+        .renderText {
+            width: 90%;
+            text-align: left;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .renderIMG {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            row-gap: 10px;
+        }
+
+    }
+
+    @media(max-width:600px){
+        .homeButton {
+            margin-left: 15px;
+            margin-top: 30px;
+        }
+
+        .homeButtom img {
+            height: 50px;
+        }
+
+        .footerText {
+            font-size: 15px;
+        }
+
+        .footerLink {
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            /* text-decoration: underline;
+            font-size: 15px;
+            color:#daa9ad; */
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .description {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            row-gap: 10px;
+            /* padding-top: 20px; */
+        }
+
+        .lineRenders {
+            padding-top: 80px;
+        }
+
+        .body p {
+            width: 100%;
+        }
+
+         .renderIMG {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+            row-gap: 10px;
+        }
+
+        .navLinks {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            row-gap: 10px;
+        }
+
+        .navlink {
+            text-decoration: none;
+            color: white;
+            border: .5px solid white;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+            border-radius: 50px;
+            /* margin-right: 5px; */
+        }
+
+        .navlink p {
+            font-weight: 10px;
+        }
+
+    }
+       
+
+
+</style>
+
+
+
+<body>
+     <nav class="nav">
+        <a href="home.html" class="homeButton" id="logo">
+            <img src="../items/logo.png" alt="logo" width="auto" height="120px">
+        </a>
+        <!-- <hr class="aboutLine"> -->
+        <div class="navLinks">
+            <a href="home.html#work" class="navlink">work</a>
+            <a href="play.html" class="navlink">play</a>
+            <a href="about.html" class="navlink">about</a>  
+        </div>
+    </nav>
+    <div class="play">
+        <h1>Blender Exploration</h1>
+        <div class="information">
+            <div class="description">
+                <h4><span class="gradientText">description</span></h4>
+                <p> During the summer of 2024 I decided to take it upon myself to learn Blender.
+                    <br>My first project was the classic donut, and then I tried to model a face and body.
+                    <br>This project showcases my sculpting of the human figure, as well as learning 
+                    <br>how to use textures, lighting, and basic rigging to create an animation.
+                </p>
+            </div>
+            <div>
+                <h4><span class="gradientText">timeline</span></h4>
+                <p>07/2024 -<br>08/2024</p>
+            </div>
+            <div>
+                <h4><span class="gradientText">role</span></h4>
+                <p>individual</p>
+            </div>
+            <div>
+                <h4><span class="gradientText">tools</span></h4>
+                <p>blender,<br>adobe premiere pro,<br>medibang paint pro</p>
+            </div>
+        </div>
+        <div class="blenderRenders">
+            <video src="../items/work/body model/My Movie.mov" autoplay loop muted playsinline
+            style="width:90%; border-radius:10px;"
+            >
+            </video>
+        </div>
+        <div class="subhead">
+            <hr class="subLine">
+            <!-- <h4 class="subText">line animations</h4>
+            <hr class="subLine"> -->
+        </div>
+        <div class="lineRenders">
+            <div class="subRender">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <img src="../items/work/body model/untitled.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius:10px;">
+                </div>
+                <div class="renderIMG">
+                    <img src="../items/work/body model/Screen Shot 2024-07-15 at 1.32.50 AM.png">
+                    <img src="../items/work/body model/Screen Shot 2024-07-14 at 10.17.28 PM.png">
+                    <img src="../items/work/body model/Screen Shot 2024-07-14 at 10.25.07 PM.png">
+                </div>
+            </div>
+            <div class="renderText">
+                <h1><span class="gradientText">face model</span></h1>
+                <p>
+                    I first created a face model through sculpting in Blender.
+                    I learned how to use the various sculpting tools, shapes, and
+                    modifiers to create the face and hair. I then textured the hair 
+                    and skin myself within blender.
+                </p>
+            </div>
+        </div>
+        
+        <div class="body">
+            <h1><span class="gradientText">body model</span></h1>
+            <p>Utilizing my previous face model, I tweaked certain aspects such 
+                as the nose, eyes, lashes, eyebrows, and hair. I then sculpted out
+                a figure in t-pose, which I then posed into a more relaxed pose
+                by adding bones and a skeleton the figure.
+            </p>
+        </div>
+    
+            
+    
+        <div class="photos">
+            <img src="../items/work/body model/uh.png">
+            <img src="../items/work/body model/body1animation.mp4.png">
+            <img src="../items/work/body model/body3(2.1).png">
+            <!-- <img src="../items/work/body model/body2(5).png"> -->
+            <img src="../items/work/body model/body2(8).png">
+        </div>
+        
+    </div>
+
+   
+
+</body>
+<footer class="homeFooter">
+        <p class="footerText"> &copy; 2025 deeptika mandha</p>
+        <p class="footerText">coded with html/css/javascript</p>
+        <a href="mailto:dmandha@andrew.cmu.edu" class="footerLink"> contact </a>
+        <p></p>
+        <div class="toTop">
+            <a href="#" class="footerLink">back to top</a>
+        </div>
+</footer>
+</html>

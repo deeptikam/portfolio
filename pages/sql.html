@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href="../items/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../style.css">
+    <title>cafe sales</title>
+    <script defer src="../script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Dongle&family=Monoton&family=NTR&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Dongle&family=Monoton&family=NTR&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="cursor"></div>
+
+<style>
+
+    .SQLlist {
+        columns: 400px;
+        margin-top: 60px;
+        margin-left: 0px;
+        margin-right: 60px;
+    }
+    .playIMG {
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+    .website {
+        background: linear-gradient(to right, #C7DAA9, #daa9ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: none;
+   }
+
+   .website:hover {
+        background: linear-gradient(to right, #C7DAA9, #daa9ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: underline;
+   }
+
+     .homeFooter {
+            line-height: 10px;
+            margin-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 100px;
+            /* display: flex;
+            flex-wrap: wrap; */
+        }
+
+        .footerText {
+            font-size: 18px;
+        }
+
+        .footerLink {
+            text-decoration: none;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            text-decoration: underline;
+            color:#daa9ad;
+        }
+
+        .link {
+            color: #C7DAA9;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #daa9ad;
+            text-decoration: underline;
+        }
+
+        .play {
+            margin-top: 90px;
+            margin-left: 100px;
+            /* border: 1px solid pink; */
+        }
+
+       
+
+        .gradient {
+            background: linear-gradient(to right, #C7DAA9, #daa9ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .information {
+            display: flex;
+            width: 90%;
+            flex-wrap: wrap;
+            gap: 80px;
+            /* padding-top: 20px; */
+        }
+
+        .information p {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .information h4 {
+            margin-bottom: 4px;
+        }
+
+        .blenderRenders {
+            display: flex;
+            /* margin-left: -10px; */
+            width: 100%;
+            flex-wrap: wrap;
+            margin-top: 80px;
+            /* border: 1px solid pink; */
+            gap: 30px;
+            /* border: 1px solid pink; */
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+
+
+        .render {
+            width: 45%;
+            border-radius: 10px;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes appear {
+           from{
+                opacity:0;
+                scale:1;
+                transform: translateY(50px);
+            }
+            to {
+                opacity:1;
+                scale:1;
+                transform: translateY(0px);
+            }
+        }
+
+        .title {
+            display: flex;
+        }
+
+        .subhead {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 93%;
+            margin-top: 150px;
+        }
+        
+        .subLine {
+            background: white;
+            border: none;
+            height:.5px;
+            flex-grow:1;
+        }
+
+        .subText {
+            white-space: nowrap;
+            margin:0;
+        }
+
+        iframe {
+            width:500px;
+            height:auto;
+        }
+
+        .homeFooter p {
+            font-weight: 400;
+        }
+
+        p {
+            font-weight: lighter;
+        }
+
+        .subRender {
+            width: 900px;
+            /* border: 1px solid blue; */
+        }
+
+        .renderText {
+            width: 300px;
+            text-align: right;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .lineRenders {
+            display:flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            padding-top: 120px;
+        }
+
+        .subRender img {
+            width: 280px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        .renderIMG img {
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .renderIMG {
+            gap:10px;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 30px;
+            padding-top: 120px;
+        }
+
+        .photos img {
+            border-radius: 10px;
+            width: 90%;
+            /* height: 700px; */
+            aspect-ratio: 7 / 4;
+            object-fit: cover;
+            object-position: center;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+      
+
+        .body img {
+            margin-top: -50px;
+            height: 80%;
+            border-radius: 10px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        .body {
+            padding-top: 180px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 300px;
+            padding-bottom: 60px;;
+        }
+        
+        .process {
+            width: 40%;
+            margin-top: -50px;
+        }
+
+         .processText {
+            width: 93%;
+            margin-top: -50px;
+        }
+
+        .sketch {
+            display: flex;
+            gap: 50px;
+        }
+       
+        .itchio {
+            color: #C7DAA9;
+            text-decoration: none;
+        }
+
+        .itchio:hover {
+            color: #daa9ad;
+            text-decoration: underline;
+        }
+        
+        .wireframe {
+            margin-top: -100px;
+        }
+
+        #deliver {
+            width: 430px;
+            text-align: right;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* border: 1px solid green; */
+        }
+
+        #meow {
+            gap: 0px;
+        }
+
+        .sketch img {
+            width: 600px;
+            height: auto;
+        }
+
+        .sketch2 {
+            width: 20%;
+        }
+
+        #design {
+            gap: 80px;
+        }
+
+        #design2 {
+            gap: 80px;
+        }
+
+        @media(max-width:1024px){
+
+         .sketch img{
+            margin-top: 50px;
+            margin-bottom: -50px;
+            width: 90%;
+        }
+        
+        .footerLink {
+            text-decoration: none;
+            /* font-size: 15px; */
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            /* text-decoration: underline;
+            font-size: 15px;
+            color:#daa9ad; */
+            text-decoration: none;
+            /* font-size: 15px; */
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            row-gap: 30px;
+            /* padding-top: 20px; */
+        }
+
+        .information p {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .information h4 {
+            margin-bottom: 4px;
+        }
+
+        .description {
+            width: 100%;
+            margin-bottom: -50px;
+        }
+
+        .body p {
+            width: 90%;
+        }
+
+        .play {
+            margin-top: 120px;
+            margin-left: 7%;
+        }
+
+        .renderText {
+            width: 90%;
+            text-align: left;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .renderIMG {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            row-gap: 10px;
+        }
+
+        .process {
+            width: 100%;
+        }
+
+        #design {
+            padding-top: 50px;
+        }
+
+        #deliver {
+            width: 90%;
+            text-align: left;
+        }
+
+        /* #meow subRender {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        } */
+
+    }
+
+    @media(max-width:600px){
+
+        .list {
+            /* columns: 300px; */
+            margin-top: 60px;
+            margin-left: 35px;
+            margin-right: 20px;
+        }
+
+        .homeButton {
+            margin-left: 15px;
+            margin-top: 30px;
+        }
+
+        .homeButtom img {
+            height: 50px;
+        }
+
+        .footerText {
+            font-size: 15px;
+        }
+
+        .footerLink {
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            /* text-decoration: underline;
+            font-size: 15px;
+            color:#daa9ad; */
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .description {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            row-gap: 10px;
+            /* padding-top: 20px; */
+        }
+
+        .lineRenders {
+            padding-top: 80px;
+        }
+
+        .body p {
+            width: 100%;
+        }
+
+         .renderIMG {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+            row-gap: 10px;
+        }
+
+        .process {
+            width: 95%;
+        }
+
+        /* .information {
+            border: 1px solid red;
+            width: 150vw;
+        } */
+        
+        /* .play {
+            width: 150vw;
+        } */
+
+        .sketch img{
+            margin-top: 50px;
+            margin-bottom: -50px;
+            width: 90%;
+        }
+
+        #final {
+            margin-top: -30px;
+        }
+
+        .navLinks {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            row-gap: 10px;
+        }
+
+        .navlink {
+            text-decoration: none;
+            color: white;
+            border: .5px solid white;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+            border-radius: 50px;
+            /* margin-right: 5px; */
+        }
+
+        .navlink p {
+            font-weight: 10px;
+        }
+       
+    }
+        
+        
+        
+
+</style>
+
+
+
+<body>
+     <nav class="nav">
+        <a href="../index.html" class="homeButton" id="logo">
+            <img src="../items/logo.png" alt="logo" width="auto" height="120px">
+        </a>
+        <!-- <hr class="aboutLine"> -->
+        <div class="navLinks">
+            <a href="../index.html#work" class="navlink">work</a>
+            <a href="play.html" class="navlink">play</a>
+            <a href="about.html" class="navlink">about</a>  
+        </div>
+    </nav>
+    <div class="play">
+        <h1>Cafe Sales Data Project</h1>
+        <div class="information">
+            <div>
+                <h4><span class="gradientText">description</span></h4>
+                <p>
+                    This project demonstrates transforming raw sales data into a clean, structured,
+                    <br> and queryable relational database. It includes data cleaning, normalization
+                    <br>was our prompted client for the project, and each of us had to create a website
+                    <br>into 3NF, schema design, data insertion with Pandas, and SQL queries.
+                    <br>while also accounting for usability and design. The project consisted of keeping track
+                    <br>of user stories, user testing, a design guide, and more. The project required using 
+                    <br>HTML, CSS, JavaScript, jQuery, API Integration, form validation, and more.
+                    <br>Due to the time constraint and requirements of the project, there are no media queries. 
+                    <br>
+                    <br>The raw data can be found <a class="itchio" href="https://www.kaggle.com/datasets/ahmedmohamed2003/cafe-sales-dirty-data-for-cleaning-training?resource=download" target="_blank">here.</a>
+                    <br>View all queries and code <a class="itchio" href="https://github.com/deeptikam/Cafe-Sales?tab=readme-ov-file" target="_blank">here.</a>
+                </p>
+            </div>
+            <div>
+                <h4><span class="gradientText">timeline</span></h4>
+                <p>06/2025</p>
+            </div>
+            <div>
+                <h4><span class="gradientText">role</span></h4>
+                <p>individual</p>
+            </div>
+            <div>
+                <h4><span class="gradientText">tools</span></h4>
+                <p>sqlite,<br>vscode,<br>sql, <br>python (pandas),</p>
+            </div>
+        </div>
+        <div class="blenderRenders">
+            <img src="../items/work/sql/Web_Photo_Editor.jpg" 
+            style="width:90%; border-radius:10px;"
+            >
+       
+        </div>
+        <div class="subhead">
+            <hr class="subLine">
+            <h4 class="subText">design</h4>
+            <hr class="subLine">
+        </div>
+
+
+
+        <div class="body" id="design">
+            <div class="sketch">
+                <img src="../items/work/sql/ERD Diagram.png">
+            </div>
+            <div class="process" style="margin-top: 50px;">
+                <h1><span class="gradientText">entity relationship diagram</span></h1>
+                <p>
+                    The original data was a flat, unnormalized table. In order to achieve 3NF within the data, 
+                    I constructed an ERD Diagram 
+                    showcasing the different connections within the data through separate tables and keys, 
+                    involving both cardinality and modality, key relationships, and data types.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="body" id="design2">
+             <div class="sketch">
+                     <img src="../items/work/sql/data dictionary.png">
+                </div>
+            <div class="process" style="margin-top: 0px;">
+                
+                <h1><span class="gradientText">data dictionary</span></h1>
+                <p>
+                    In order to have a clear reference for my data, I created a data dictionary 
+                    that specifies the characteristics of each input, separated into the tables the final database would hold.
+                </p>
+            </div>
+        </div>
+
+        
+    <div class="subhead">
+            <hr class="subLine">
+            <h4 class="subText">data cleaning / insertion</h4>
+            <hr class="subLine">
+        </div>
+
+
+
+        <div class="body">
+            <div class="processText" style="margin-top: -150px;">
+                <h1><span class="gradientText">data cleaning</span></h1>
+                <p>
+                    I utilized Pandas to clean the dirty_cafe_sales.csv (10,000 rows of data). 
+                    Although I didn't have much prior experience with Pandas, I learned a lot as I worked towards how exactly 
+                    I wanted to clean the data and what would make sense in a real-world scenario. I removed duplicates and 
+                    standardized formatting, converted data types, calculated missing values, and ensured NaN usage, preserving rows 
+                    with missing values in the Transactions table as to not lose/skew data.
+                </p>
+            </div>
+            <div class="processText" style="margin-top: -250px;">
+                <h1><span class="gradientText">schema and insert</span></h1>
+                <p>
+                    In order to create my database tables, I used both Pandas and SQL. I used SQL to create the relational tables, 
+                    which I based on my Data Dictionary and ERD Diagram. I used Pandas to insert data from the new 
+                    cleaned CSV into my schema tables, and ensured uniqueness in entries and correct usage of merging.
+                </p>
+            </div>
+        </div>
+        
+        <div class="subhead" style="margin-top: 0px;">
+            <hr class="subLine">
+            <h4 class="subText">sql queries</h4>
+            <hr class="subLine">
+        </div>
+
+        <div class="processText" style="margin-top: 50px;">
+                <h1><span class="gradientText">queries</span></h1>
+                <p>
+                    I came up with 10 different questions to write queries for to demonstrate aggregate functions, joins, grouping, 
+                    and more. I wrote each question keeping in mind what the data could be used for in the real world. 
+                    Results can be viewed below.
+                </p>
+            </div>
+        <div class="SQLlist">
+             <img class="playIMG" src="../items/work/sql/1.png">
+            <img class="playIMG" src="../items/work/sql/2.png">
+            <img class="playIMG" src="../items/work/sql/3.png">
+            <img class="playIMG" src="../items/work/sql/4.png">
+            <img class="playIMG" src="../items/work/sql/5.png">
+            <img class="playIMG" src="../items/work/sql/6.png">
+            <img class="playIMG" src="../items/work/sql/7.png">
+            <img class="playIMG" src="../items/work/sql/8.png">
+            <img class="playIMG" src="../items/work/sql/9.png">
+            <img class="playIMG" src="../items/work/sql/10.png">
+        </div>
+    
+        
+    </div>
+
+   
+
+</body>
+<footer class="homeFooter">
+       <p class="footerText"> &copy; 2025 deeptika mandha</p>
+        <p class="footerText">coded with html/css/javascript</p>
+        <a href="mailto:dmandha@andrew.cmu.edu" class="footerLink"> contact </a>
+        <p></p>
+        <div class="toTop">
+            <a href="#" class="footerLink">back to top</a>
+        </div>
+</footer>
+</html>

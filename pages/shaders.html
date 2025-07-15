@@ -494,15 +494,11 @@
                 <div class="renderText">
                 <h1><span class="gradientText">Water</span></h1>
                 <p>
-                    This stylized bubble material was created in Unreal Engine using Material Graph. 
-                    I wanted to replicate the thin, colorful, reflective look of real soap bubbles.
-                     It uses scalar parameters for metallic, specular, roughness, opacity, and refraction 
-                     to control surface properties. To simulate the rainbow-like edge highlight, 
-                     I used a Fresnel node multiplied by a color vector for emissive glow. 
-                     The main body color is built using a 3ColorBlend and a texture sample, 
-                     allowing me to create rich color variation across the bubble’s surface. 
-                     I also experimented with panning textures and animated refraction to 
-                     simulate subtle wobble.
+                    This custom Unity shader simulates dynamic surface waves with lighting and normal mapping. I built it using 
+                    HLSL in Unity’s ShaderLab, following and modifying techniques from beginner tutorials to understand vertex 
+                    displacement and fragment shading. The wave effect is driven by a sine function applied to the world position in the vertex shader, with 
+                    adjustable parameters for speed, strength, and height. In the fragment shader, 
+                    a normal map is used to add lighting detail, and a lerp between two colors based on height gives the shader its animated appearance.
                 </p>
           
             

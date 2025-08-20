@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href="../items/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../style.css">
+    <title>dressup</title>
+    <script defer src="../script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Dongle&family=Monoton&family=NTR&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Dongle&family=Monoton&family=NTR&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="cursor"></div>
+
+<style>
+
+
+    #texture {
+        display: flex;
+        flex-wrap: wrap;
+        width: 800px;
+    }
+
+    .playIMG {
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+    .website {
+        background: linear-gradient(to right, #C7DAA9, #daa9ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: none;
+   }
+
+   .website:hover {
+        background: linear-gradient(to right, #C7DAA9, #daa9ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: underline;
+   }
+
+     .homeFooter {
+            line-height: 10px;
+            margin-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 100px;
+            /* display: flex;
+            flex-wrap: wrap; */
+        }
+
+        .footerText {
+            font-size: 18px;
+        }
+
+        .footerLink {
+            text-decoration: none;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            text-decoration: underline;
+            color:#daa9ad;
+        }
+
+        .link {
+            color: #C7DAA9;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #daa9ad;
+            text-decoration: underline;
+        }
+
+        .play {
+            margin-top: 90px;
+            margin-left: 100px;
+            /* border: 1px solid pink; */
+        }
+
+       
+
+        .gradient {
+            background: linear-gradient(to right, #C7DAA9, #daa9ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .information {
+            display: flex;
+            width: 90%;
+            flex-wrap: wrap;
+            gap: 80px;
+            /* padding-top: 20px; */
+        }
+
+        .information p {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .information h4 {
+            margin-bottom: 4px;
+        }
+
+        .blenderRenders {
+            display: flex;
+            /* margin-left: -10px; */
+            width: 100%;
+            flex-wrap: wrap;
+            margin-top: 80px;
+            /* border: 1px solid pink; */
+            gap: 30px;
+            /* border: 1px solid pink; */
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+
+
+        .render {
+            width: 45%;
+            border-radius: 10px;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes appear {
+           from{
+                opacity:0;
+                scale:1;
+                transform: translateY(50px);
+            }
+            to {
+                opacity:1;
+                scale:1;
+                transform: translateY(0px);
+            }
+        }
+
+        .title {
+            display: flex;
+        }
+
+        .subhead {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 93%;
+            margin-top: 150px;
+        }
+        
+        .subLine {
+            background: white;
+            border: none;
+            height:.5px;
+            flex-grow:1;
+        }
+
+        .subText {
+            white-space: nowrap;
+            margin:0;
+        }
+
+        iframe {
+            width:500px;
+            height:auto;
+        }
+
+        .homeFooter p {
+            font-weight: 400;
+        }
+
+        p {
+            font-weight: lighter;
+        }
+
+        .subRender {
+            width: 900px;
+            /* border: 1px solid blue; */
+        }
+
+        .renderText {
+            width: 300px;
+            text-align: right;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .lineRenders {
+            display:flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            padding-top: 120px;
+        }
+
+        .subRender img {
+            width: 280px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        .renderIMG img {
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .renderIMG {
+            gap:10px;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 30px;
+            padding-top: 100px;
+            padding-left: 3%;
+        }
+
+        .photos img {
+            border-radius: 10px;
+            width: 90%;
+            /* height: 700px; */
+            aspect-ratio: 7 / 4;
+            object-fit: cover;
+            object-position: center;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+      
+
+        .body img {
+            margin-top: -50px;
+            height: 80%;
+            border-radius: 10px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        .body {
+            padding-top: 180px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 300px;
+            padding-bottom: 60px;;
+        }
+        
+        .process {
+            width: 30%;
+            margin-top: -50px;
+        }
+
+         .processText {
+            width: 93%;
+            margin-top: -50px;
+        }
+
+        .sketch {
+            display: flex;
+            gap: 50px;
+            animation: appear linear;
+        }
+       
+        .itchio {
+            color: #C7DAA9;
+            text-decoration: none;
+        }
+
+        .itchio:hover {
+            color: #daa9ad;
+            text-decoration: underline;
+        }
+        
+        .wireframe {
+            margin-top: -100px;
+        }
+
+        #deliver {
+            width: 430px;
+            text-align: right;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* border: 1px solid green; */
+        }
+
+        #meow {
+            gap: 0px;
+        }
+
+        .sketch img {
+            width: 800px;
+            height: auto;
+        }
+
+         .sketch video {
+            width: 800px;
+            height: auto;
+            animation: appear linear;
+            border-radius: 15px;
+        }
+
+
+        .sketch2 {
+            width: 20%;
+        }
+
+        #design {
+            gap: 80px;
+        }
+
+        #design2 {
+            gap: 80px;
+        }
+
+        #design3 {
+            gap: 80px;
+        }
+
+         #design4 {
+            gap: 80px;
+        }
+
+        @media(max-width:1024px){
+
+         .sketch img{
+            margin-top: 50px;
+            margin-bottom: -50px;
+            width: 90%;
+        }
+
+        .sketch video{
+            margin-top: 50px;
+            margin-bottom: -50px;
+            width: 90%;
+        }
+        
+        .footerLink {
+            text-decoration: none;
+            /* font-size: 15px; */
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            /* text-decoration: underline;
+            font-size: 15px;
+            color:#daa9ad; */
+            text-decoration: none;
+            /* font-size: 15px; */
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            row-gap: 30px;
+            /* padding-top: 20px; */
+        }
+
+        .information p {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .information h4 {
+            margin-bottom: 4px;
+        }
+
+        .description {
+            width: 100%;
+            margin-bottom: -50px;
+        }
+
+        .body p {
+            width: 90%;
+        }
+
+        .play {
+            margin-top: 120px;
+            margin-left: 7%;
+        }
+
+        .renderText {
+            width: 90%;
+            text-align: left;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .renderIMG {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            row-gap: 10px;
+        }
+
+        .process {
+            width: 100%;
+        }
+
+        #design {
+            padding-top: 50px;
+        }
+
+        #deliver {
+            width: 90%;
+            text-align: left;
+        }
+
+        /* #meow subRender {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        } */
+
+    }
+
+    @media(max-width:600px){
+
+        /* #import {
+            margin-top: 200px;
+        } */
+
+        .body {
+            padding-top: 30px;
+        }
+
+        .list {
+            /* columns: 300px; */
+            margin-top: 60px;
+            margin-left: 35px;
+            margin-right: 20px;
+        }
+
+        .homeButton {
+            margin-left: 15px;
+            margin-top: 30px;
+        }
+
+        .homeButtom img {
+            height: 50px;
+        }
+
+        .footerText {
+            font-size: 15px;
+        }
+
+        .footerLink {
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            /* text-decoration: underline;
+            font-size: 15px;
+            color:#daa9ad; */
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .description {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            row-gap: 10px;
+            /* padding-top: 20px; */
+        }
+
+        .lineRenders {
+            padding-top: 80px;
+        }
+
+        .body p {
+            width: 100%;
+        }
+
+         .renderIMG {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+            row-gap: 10px;
+        }
+
+        .process {
+            width: 95%;
+        }
+
+        /* .information {
+            border: 1px solid red;
+            width: 150vw;
+        } */
+        
+        /* .play {
+            width: 150vw;
+        } */
+
+        .sketch img{
+            margin-top: 50px;
+            margin-bottom: -50px;
+            width: 90%;
+        }
+
+        .sketch video{
+            margin-top: 50px;
+            margin-bottom: -50px;
+            width: 90%;
+        }
+
+        #final {
+            margin-top: -30px;
+        }
+
+        .navLinks {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            row-gap: 10px;
+        }
+
+        .navlink {
+            text-decoration: none;
+            color: white;
+            border: .5px solid white;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+            border-radius: 50px;
+            /* margin-right: 5px; */
+        }
+
+        .navlink p {
+            font-weight: 10px;
+        }
+       
+    }
+        
+        
+        
+
+</style>
+
+
+
+<body>
+     <nav class="nav">
+        <a href="../index.html" class="homeButton" id="logo">
+            <img src="../items/logo.png" alt="logo" width="auto" height="120px">
+        </a>
+        <!-- <hr class="aboutLine"> -->
+        <div class="navLinks">
+            <a href="../index.html#work" class="navlink">work</a>
+            <a href="play.html" class="navlink">play</a>
+            <a href="about.html" class="navlink">about</a>  
+        </div>
+    </nav>
+    <div class="play">
+        <h1>DressUp D</h1>
+        <div class="information">
+            <div>
+                <h4><span class="gradientText">description</span></h4>
+                <p>
+                    DressUp D is a dressup game made with items from my own closet, inspired by my love for fashion.
+                    <br> This project incorporates animation, modeling, game design, scripting, texturing, UI, and more.
+                    <br>I utilized various applications to run through the entire pipeline flow, allowing me to learn
+                    <br>new skills and knowledge throughout the process. The scop
+                    <br>
+                    <br>The Mac download file can be found <a class="itchio" href="https://deeptikam.itch.io/dress-up-d" target="_blank">here.</a> WebGL is in progress.
+                    <br>View the gameplay below
+                </p>
+            </div>
+            <div>
+                <h4><span class="gradientText">timeline</span></h4>
+                <p>06/2025 -<br>08/2025</p>
+            </div>
+            <div>
+                <h4><span class="gradientText">role</span></h4>
+                <p>individual</p>
+            </div>
+            <div>
+                <h4><span class="gradientText">tools</span></h4>
+                <p>blender,<br>mixamo,<br>unity, <br>substance painter, <br>adobe illustrator</p>
+            </div>
+        </div>
+        <div class="blenderRenders">
+            <video src="../items/work/dressup d/trim.mp4" 
+            autoplay
+            controls 
+            playsinline 
+            muted 
+            loop
+            style="width:90%; border-radius:10px;"
+            >
+            </video>
+       
+        </div>
+        <div class="subhead">
+            <hr class="subLine">
+            <h4 class="subText">asset creation</h4>
+            <hr class="subLine">
+        </div>
+
+
+
+        <div class="body" id="design">
+            <div class="sketch">
+                <img src="../items/work/dressup d/model.png">
+            </div>
+            <div class="process" style="margin-top: 0px;">
+                <h1><span class="gradientText">modeling</span></h1>
+                <p>
+                    I began modeling the character using basic primitives in Blender 
+                    (spheres, cubes, planes), then sculpted a high-poly body model to establish form 
+                    and detail. From there, I created a clean low-poly version by using the shrinkwrap modifier, 
+                    mirror modifier, and snapping tools for retopology, and baked the high-poly details onto the 
+                    low-poly mesh for optimization.
+                </p>
+
+                <p>
+                    For the hair, I modeled strands using curves, then converted and optimized them 
+                    into a single mesh for efficiency. I created two versions for the hair,
+                    my hair when it is straight, and when it is in its natural form. For the clothing, I generated base meshes with the 
+                    shrinkwrap modifier over the body, then refined the topology and form through sculpting 
+                    and additional modifiers. Each clothing mesh is based off of an item from my closet.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="body" id="design2">
+             <div class="sketch">
+                     <video src="../items/work/dressup d/animation.mov"
+                     autoplay
+                        loop
+                        muted
+                        playsinlines
+                        >
+                     </video>
+                </div>
+            <div class="process" style="margin-top: 50px;">
+                
+                <h1><span class="gradientText">animation/rigging</span></h1>
+                <p>
+                    For rigging, I used Mixamo to quickly generate an idle animation, 
+                    which helped keep the project within scope. I refined the rig by weight 
+                    painting areas of the body to achieve more natural deformations. Once satisfied, 
+                    I applied the armature to the hair and clothing items.
+                </p>
+
+                <p>
+                    Initially, I experimented with the Surface Deform modifier for clothing, 
+                    but realized it would not be compatible with game engines. So I instead parented the 
+                    clothing meshes directly to the body armature. This introduced issues where some clothing 
+                    became warped due to modifier stack order and unapplied transformations. To resolve this, 
+                    I retopologized the clothing, ensured modifiers were applied in the correct order, and consistently 
+                    applied transformations before joining meshes. With these fixes, the clothing deformed correctly, 
+                    and I fine-tuned results through additional weight painting to minimize overlaps.
+                </p>
+
+                 <p>
+                    To add more expressiveness, I created basic facial animations using shapekeys, 
+                    including blinking and subtle smiling. I also rebuilt the eyeliner and eyelashes 
+                    so they could follow the facial shapekeys, ensuring natural movement during animation.
+                </p>
+            </div>
+        </div>
+
+        <div class="body" id="design3">
+             <div class="sketch" id="texture">
+                     <img src="../items/work/dressup d/substancepainter.png">
+                     <img src="../items/work/dressup d/full outfits.png">
+                </div>
+            <div class="process" style="margin-top: 0px;">
+                
+                <h1><span class="gradientText">texturing</span></h1>
+                <p>
+                    I textured all meshes using Substance Painter, 
+                    combining hand-painting with procedural materials 
+                    (such as fiber and weave) to add realistic detail to the clothing. 
+                    To accommodate hardware limitations on my laptop, I painted at a lower resolution 
+                    and then exported textures at a higher resolution for final use.
+                </p>
+            </div>
+        </div>
+
+        
+    <div class="subhead">
+            <hr class="subLine">
+            <h4 class="subText">game engine</h4>
+            <hr class="subLine">
+        </div>
+
+
+
+        <div class="body">
+            <div class="processText" style="margin-top: 0px;" id="import">
+                <h1><span class="gradientText">importing</span></h1>
+                <p>
+                    I set up my Unity project by creating basic scenes and importing my character and clothing as FBX files from Blender.
+                    Through trial and error, I refined the export process. For example, my animation within Unity was jittery, 
+                    which I solved by changing the simplify export option from '1' to '0', resulting in all keyframes being preserved.
+                </p>
+                <p>
+                    After importing clothing, I noticed weight painting 
+                    behaved differently in Unity due to its 4-bone weight limit per vertex. 
+                    To resolve this, I returned to Blender, applied bone limitations to each 
+                    clothing item, and re-weight painted where necessary before re-importing.
+                </p>
+                <p>
+                    Finally, I checked the root bones and armature for each mesh in Unity, and configured
+                    Unity's Animator to apply the idle animation consistently across the character and clothing meshes.
+                </p>
+            </div>
+
+         <div class="body" id="design4" style="margin-top: -300px;">
+            <div class="sketch">
+                <video src="../items/work/dressup d/trimproto.mp4"
+                autoplay
+                muted
+                loop
+                playsinline>
+                </video>
+            </div>
+            <div class="process" style="margin-top: 50px;">
+                <h1><span class="gradientText">logic</span></h1>
+                <p>
+                    To map out the game structure, 
+                    I first built a prototype using simple UI elements and untextured 
+                    models. The core mechanic allowed the user to select a button to apply corresponding 
+                    clothing to the character.
+
+                    I wrote several C# scripts to handle functionality, including how 
+                    clothing is applied. My first approach was activating and deactivating clothing meshes, 
+                    but this caused animation mismatches due to clothing sometimes starting at a different keyframe than 
+                    the body. To resolve this, I switched to toggling the Skinned Mesh Renderer 
+                    for each clothing item. Each button was assigned a clothing index to toggle OnClick, ensuring 
+                    the correct outfit appeared while remaining synchronized with the character’s animation.
+                </p>
+            </div>
+        </div>
+
+            <div class="processText" style="margin-top: -250px;">
+                <h1><span class="gradientText">ui design</span></h1>
+                <p>
+                    I created my UI elements through Adobe Illustrator, utilizing effects such as 3D and drop shadow
+                    to create more visually interested design. Various scripts were also written to enhance usability.
+                </p>
+                <p>
+                    To improve usability, I implemented camera and UI panel switching so each clothing 
+                    category had its own dedicated view and panel, which could be toggled based on the player’s 
+                    selection. I also added visual feedback to make the interface more intuitive. Buttons change 
+                    appearance when an item is selected, and they scale up slightly on hover. I also included cursor
+                    changes when hovering over interactive elements, which provided an extra layer of clarity and responsiveness.
+                </p>
+            </div>
+        </div>
+        
+        <div class="subhead" style="margin-top: 0px;">
+            <hr class="subLine">
+            <h4 class="subText">reflection</h4>
+            <hr class="subLine">
+        </div>
+
+        <div class="processText" style="margin-top: 50px;">
+                <h1><span class="gradientText">process</span></h1>
+                <p>
+                   Throughout the development of this game, 
+                   I engaged in a lot of trial and error to discover what worked and what did not. 
+                   This process taught me a great deal, including nuances in modeling, rigging, game design, 
+                   and UI. I learned how to make assets game-ready and gained practical problem-solving skills that 
+                   I would not have encountered without taking on this project.
+                </p>
+            </div>
+
+         <div class="processText" style="margin-top: 50px;">
+                <h1><span class="gradientText">improvements</span></h1>
+                <p>
+                   Future improvements could include creating a WebGL version, adding sound effects, 
+                   implementing a loading screen between the start screen and the game, enabling drag-and-drop 
+                   functionality for clothing, allowing color changes for outfits, and adding a feature for users 
+                   to download an image of their created outfit rather than exiting immediately.
+                </p>
+            </div>
+
+
+        <div class="subhead">
+            <hr class="subLine">
+            <h4 class="subText">game screenshots</h4>
+            <hr class="subLine">
+        </div>
+
+        <div class="photos">
+            <img src="../items/work/dressup d/homescreen.png">
+            <img src="../items/work/dressup d/full.png">
+            <img src="../items/work/dressup d/hair.png">
+            <img src="../items/work/dressup d/tops.png">
+            <img src="../items/work/dressup d/bottoms.png">
+            <img src="../items/work/dressup d/shoes.png">
+        </div>
+     
+    
+        
+    </div>
+
+   
+
+</body>
+<footer class="homeFooter">
+       <p class="footerText"> &copy; 2025 deeptika mandha</p>
+        <p class="footerText">coded with html/css/javascript</p>
+        <a href="mailto:dmandha@andrew.cmu.edu" class="footerLink"> contact </a>
+        <p></p>
+        <div class="toTop">
+            <a href="#" class="footerLink">back to top</a>
+        </div>
+</footer>
+</html>

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href="../items/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../style.css">
+    <title>nombolo</title>
+    <script defer src="../script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Dongle&family=Monoton&family=NTR&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Dongle&family=Monoton&family=NTR&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="cursor"></div>
+
+<style>
+
+  
+
+  
+
+    .playIMG {
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+    .website {
+        background: linear-gradient(to right, #C7DAA9, #daa9ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: none;
+   }
+
+   .website:hover {
+        background: linear-gradient(to right, #C7DAA9, #daa9ad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: underline;
+   }
+
+     .homeFooter {
+            line-height: 10px;
+            margin-left: 20px;
+            padding-bottom: 20px;
+            padding-top: 100px;
+            /* display: flex;
+            flex-wrap: wrap; */
+        }
+
+        .footerText {
+            font-size: 18px;
+        }
+
+        .footerLink {
+            text-decoration: none;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            text-decoration: underline;
+            color:#daa9ad;
+        }
+
+        .link {
+            color: #C7DAA9;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #daa9ad;
+            text-decoration: underline;
+        }
+
+        .play {
+            margin-top: 90px;
+            margin-left: 100px;
+            /* border: 1px solid pink; */
+        }
+
+       
+
+        .gradient {
+            background: linear-gradient(to right, #C7DAA9, #daa9ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .information {
+            display: flex;
+            width: 90%;
+            flex-wrap: wrap;
+            gap: 80px;
+            /* padding-top: 20px; */
+        }
+
+        .information p {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .information h4 {
+            margin-bottom: 4px;
+        }
+
+        .blenderRenders {
+            display: flex;
+            /* margin-left: -10px; */
+            width: 100%;
+            flex-wrap: wrap;
+            margin-top: 80px;
+            /* border: 1px solid pink; */
+            gap: 30px;
+            /* border: 1px solid pink; */
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+
+
+        .render {
+            width: 45%;
+            border-radius: 10px;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes appear {
+           from{
+                opacity:0;
+                scale:1;
+                transform: translateY(50px);
+            }
+            to {
+                opacity:1;
+                scale:1;
+                transform: translateY(0px);
+            }
+        }
+
+        .title {
+            display: flex;
+        }
+
+        .subhead {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 93%;
+            margin-top: 150px;
+        }
+        
+        .subLine {
+            background: white;
+            border: none;
+            height:.5px;
+            flex-grow:1;
+        }
+
+        .subText {
+            white-space: nowrap;
+            margin:0;
+        }
+
+        iframe {
+            width:500px;
+            height:auto;
+        }
+
+        .homeFooter p {
+            font-weight: 400;
+        }
+
+        p {
+            font-weight: lighter;
+        }
+
+        .subRender {
+            width: 900px;
+            /* border: 1px solid blue; */
+        }
+
+        .renderText {
+            width: 300px;
+            text-align: right;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .lineRenders {
+            display:flex;
+            gap: -20px;
+            flex-wrap: wrap;
+            padding-top: 120px;
+        }
+
+
+        .subRender img {
+            width: 280px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        .subRender video {
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        .renderIMG img {
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .renderIMG {
+            gap:10px;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 30px;
+            padding-top: 100px;
+            padding-left: 3%;
+        }
+
+        .photos img {
+            border-radius: 10px;
+            width: 90%;
+            /* height: 700px; */
+            aspect-ratio: 7 / 4;
+            object-fit: cover;
+            object-position: center;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+      
+
+        .body img {
+            margin-top: -50px;
+            height: 80%;
+            border-radius: 10px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+            transform-style: preserve-3d;
+        }
+
+        .body {
+            padding-top: 180px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 300px;
+            padding-bottom: 60px;;
+        }
+        
+        .process {
+            width: 30%;
+            margin-top: -50px;
+        }
+
+         .processText {
+            width: 93%;
+            margin-top: -50px;
+        }
+
+        .sketch {
+            display: flex;
+            gap: 50px;
+            animation: appear linear;
+        }
+       
+        .itchio {
+            color: #C7DAA9;
+            text-decoration: none;
+        }
+
+        .itchio:hover {
+            color: #daa9ad;
+            text-decoration: underline;
+        }
+        
+        .wireframe {
+            margin-top: -100px;
+        }
+
+        #deliver {
+            width: 430px;
+            text-align: right;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* border: 1px solid green; */
+        }
+
+        #meow {
+            gap: 0px;
+        }
+
+        .sketch img {
+            width: 825px;
+            height: auto;
+        }
+
+         .sketch video {
+            height: 60%;
+            animation: appear linear;
+            border-radius: 15px;
+        }
+
+
+        .sketch2 {
+            width: 20%;
+        }
+
+        #design {
+            gap: 80px;
+        }
+
+        #design2 {
+            gap: 80px;
+        }
+
+        #design3 {
+            gap: 80px;
+        }
+
+         #design4 {
+            gap: 80px;
+        }
+
+        @media(max-width:1024px){
+
+        #search {
+            width: 90%;
+        }
+
+         .sketch img{
+            margin-top: 50px;
+            margin-bottom: -50px;
+            width: 90%;
+        }
+
+        .sketch video{
+            margin-top: 50px;
+            margin-bottom: -50px;
+            width: 90%;
+        }
+        
+        .footerLink {
+            text-decoration: none;
+            /* font-size: 15px; */
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            /* text-decoration: underline;
+            font-size: 15px;
+            color:#daa9ad; */
+            text-decoration: none;
+            /* font-size: 15px; */
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            row-gap: 30px;
+            /* padding-top: 20px; */
+        }
+
+        .information p {
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+        .information h4 {
+            margin-bottom: 4px;
+        }
+
+        .description {
+            width: 100%;
+            margin-bottom: -50px;
+        }
+
+        .body p {
+            width: 90%;
+        }
+
+        .play {
+            margin-top: 120px;
+            margin-left: 7%;
+        }
+
+        .renderText {
+            width: 90%;
+            text-align: left;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .renderIMG {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            row-gap: 10px;
+        }
+
+        .process {
+            width: 100%;
+        }
+
+        #design {
+            padding-top: 50px;
+        }
+
+        #deliver {
+            width: 90%;
+            text-align: left;
+        }
+
+        /* #meow subRender {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        } */
+
+    }
+
+    @media(max-width:600px){
+
+        /* #import {
+            margin-top: 200px;
+        } */
+
+        .body {
+            padding-top: 30px;
+        }
+
+        .list {
+            /* columns: 300px; */
+            margin-top: 60px;
+            margin-left: 35px;
+            margin-right: 20px;
+        }
+
+        .homeButton {
+            margin-left: 15px;
+            margin-top: 30px;
+        }
+
+        .homeButtom img {
+            height: 50px;
+        }
+
+        .footerText {
+            font-size: 15px;
+        }
+
+        .footerLink {
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .footerLink:hover {
+            /* text-decoration: underline;
+            font-size: 15px;
+            color:#daa9ad; */
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 10px;
+            color: #C7DAA9;
+        }
+
+        .description {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            row-gap: 10px;
+            /* padding-top: 20px; */
+        }
+
+        .lineRenders {
+            padding-top: 80px;
+        }
+
+        .body p {
+            width: 100%;
+        }
+
+         .renderIMG {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+            row-gap: 10px;
+        }
+
+        .process {
+            width: 95%;
+        }
+
+        /* .information {
+            border: 1px solid red;
+            width: 150vw;
+        } */
+        
+        /* .play {
+            width: 150vw;
+        } */
+
+        .sketch img{
+            margin-top: 50px;
+            margin-bottom: -50px;
+            width: 90%;
+        }
+
+        .sketch video{
+            margin-top: 50px;
+            margin-bottom: -50px;
+            width: 90%;
+        }
+
+        #final {
+            margin-top: -30px;
+        }
+
+        .navLinks {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            row-gap: 10px;
+        }
+
+        .navlink {
+            text-decoration: none;
+            color: white;
+            border: .5px solid white;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+            border-radius: 50px;
+            /* margin-right: 5px; */
+        }
+
+        .navlink p {
+            font-weight: 10px;
+        }
+       
+    }
+        
+        
+        
+
+</style>
+
+
+
+<body>
+     <nav class="nav">
+        <a href="../index.html" class="homeButton" id="logo">
+            <img src="../items/logo.png" alt="logo" width="auto" height="120px">
+        </a>
+        <!-- <hr class="aboutLine"> -->
+        <div class="navLinks">
+            <a href="../index.html#work" class="navlink">work</a>
+            <a href="play.html" class="navlink">play</a>
+            <a href="about.html" class="navlink">about</a>  
+        </div>
+    </nav>
+    <div class="play">
+        <h1>Nombolo</h1>
+        <div class="information">
+            <div>
+                <h4><span class="gradientText">description</span></h4>
+                <p>
+                    I worked as an UX/UI Intern during the summer of 2025 for a startup called Nombolo.
+                    <br> Nombolo is a social platform built to provide a sense of community, find local spots, and
+                    <br>have judgement free sharing. During this internship I gained experience in startup culture, 
+                    <br>Figma, prototypes, research, and more. I worked hand in hand with engineers to build prototypes
+                    <br>that would later be deployed in app. Some of the work I did included icons, search features, rewards,
+                    <br>splashscreens, and user research.
+                </p>
+            </div>
+            <div>
+                <h4><span class="gradientText">timeline</span></h4>
+                <p>06/2025 -<br>08/2025</p>
+            </div>
+            <div>
+                <h4><span class="gradientText">role</span></h4>
+                <p>design team member</p>
+            </div>
+            <div>
+                <h4><span class="gradientText">tools</span></h4>
+                <p>figma,<br>illustrator<br></p>
+            </div>
+        </div>
+        <div class="blenderRenders">
+            <img src="../items/work/nombolo/1200x630wa.png" 
+            style="width:90%; border-radius:10px;"
+            >
+      
+       
+        </div>
+        <div class="subhead">
+            <hr class="subLine">
+            <h4 class="subText">research</h4>
+            <hr class="subLine">
+        </div>
+
+        <div class="processText" style="margin-top: 100px;" id="import">
+                <h1><span class="gradientText">login/app flow research</span></h1>
+                <p>
+                    During my internship I conducted research with new users of the app to evaluate the login flow, and creation
+                    of both social and business accounts. This information was crucial in figuring out any bugs, errors, or design flaws,
+                    as login is the first thing users will encounter. With this information I also created user flow diagrams, and
+                    user journey maps in Figma.
+                </p>
+        </div>
+
+        <div class="subhead">
+            <hr class="subLine">
+            <h4 class="subText">designs/prototypes</h4>
+            <hr class="subLine">
+        </div>
+
+        <div class="body" id="design">
+            <div class="sketch">
+                <img src="../items/work/nombolo/Onboarding Iterations.png"
+                style="width:90%;">
+            </div>
+            <div class="process" style="margin-top: 0px; width:90%;">
+                <h1><span class="gradientText">splashscreens</span></h1>
+                <p>
+                    One of the tasks I was given was creating designs for the onboarding process. 
+                    I created various designs that had multiple rounds of iterations as shown above. 
+                    Although they weren't chosen for the final design, I learned a lot about focus,
+                    aligning with a company's style, word choicing, and more. Most of my iterations
+                    involved slight changes in color, displayed text, and utilizing more imagery From
+                    the app in a 'pop-up' manner. Since we did not have a copy-writer, I came up with 
+                    some of the language used in the iterations, with tweaks as necessary through
+                    input from the marketing team and my design team members.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="body" id="design2">
+             <div class="sketch">
+                     <img src="../items/work/nombolo/Coupon Reward Flow.png">
+                </div>
+            <div class="process" style="margin-top: 50px;">
+                
+                <h1><span class="gradientText">rewards flow</span></h1>
+                <p>
+                   Nombolo helps users and local businesses create relationships through
+                   things like rewards. I was tasked with cleaning up the reward flow, and
+                   redesigning the coupons. I fixed the flow to be more intuitive, and adjusted
+                   the rewards coupons to have more information showcasing why the user got rewarded,
+                   what specific post/ask/comment got a rewarded, and what business gave the reward.
+                   I communicated with the engineers to ensure feasability, and sufficient documentation
+                   detailing the flow, features, and implementation.
+                </p>
+
+                <p></p>
+
+            </div>
+        </div>
+  
+
+        <div class="lineRenders">
+            <div class="subRender">
+              
+                    <video 
+                        src="../items/work/nombolo/search location.mov" 
+                        controls 
+                        playsinline 
+                        muted 
+                        style="width: 35%; height: auto;">
+                    </video>
+               
+                    <video 
+                        src="../items/work/nombolo/search location.mov" 
+                        controls 
+                        playsinline 
+                        muted 
+                        style="width: 35%; height: auto; padding-left: 50px;">
+                    </video>
+           
+            </div>
+             <div class="process" style="margin-top: 80px;" id="search">
+                
+                <h1><span class="gradientText">search feature</span></h1>
+                <p>
+                    The biggest feature I took on was the development of the search function.
+                    I first did research about how search works in other applications, and then
+                    met with the developers to discuss what would be feasible. With this information
+                    I laid out what the different phases of the search would be, and started designing for the
+                    first phase, which would include location, business name, and profile name search.
+                    I created two different searchbars, one for the main page, and one for when the user
+                    switches to the location view. In the design I included selection by category and sorting.
+                </p>
+
+                <p></p>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+   
+
+</body>
+<footer class="homeFooter">
+       <p class="footerText"> &copy; 2025 deeptika mandha</p>
+        <p class="footerText">coded with html/css/javascript</p>
+        <a href="mailto:dmandha@andrew.cmu.edu" class="footerLink"> contact </a>
+        <p></p>
+        <div class="toTop">
+            <a href="#" class="footerLink">back to top</a>
+        </div>
+</footer>
+</html>

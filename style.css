@@ -11,6 +11,7 @@ h1 {
 
 html {
   scroll-behavior: smooth;
+  cursor: crosshair;
 }
 
 
@@ -31,10 +32,12 @@ body {
     border: 0px;
 }
 
-
 a {
+    cursor: crosshair;
+}
+
+a:hover {
     cursor: url('./items/cursor2.png') 10 10, pointer;
-    transition: ease-out;
 }
 
 .footer {

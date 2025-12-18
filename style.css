@@ -32,12 +32,13 @@ body {
     border: 0px;
 }
 
-a {
+a, a * {
     cursor: crosshair;
+    cursor: inherit;
 }
 
 a:hover {
-    cursor: url('./items/cursor2.png') 10 10, pointer;
+    cursor: url('./items/cursor2.png') 10 10, crosshair;
 }
 
 .footer {
